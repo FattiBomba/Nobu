@@ -1,0 +1,44 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+venv/
+ENV/
+.env
+*.egg-info/
+dist/
+build/
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# Arduino
+*.elf
+*.hex
+*.bin
+build/
+.arduino15/
+
+# Logs
+*.log
+logs/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Project specific
+nobu-bridge/voices/*.onnx
+nobu-bridge/voices/*.json
+*.wav
+*.mp3
+
+# Secrets
+*.pem
+*.key
+credentials.json

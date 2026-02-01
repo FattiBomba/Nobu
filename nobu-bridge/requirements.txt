@@ -1,0 +1,53 @@
+# Nobu Bridge Python Dependencies
+# NOTE: Recommend Python 3.10-3.12 for best AI library compatibility
+
+# ===========================================
+# CORE (works on all Python versions)
+# ===========================================
+# Web framework
+fastapi>=0.100.0
+uvicorn>=0.20.0
+
+# WebSocket support
+websockets>=11.0
+
+# HTTP client
+httpx>=0.24.0
+
+# Environment management
+python-dotenv>=1.0.0
+
+# Audio processing
+numpy>=1.24.0
+soundfile>=0.12.0
+
+# Async support
+anyio>=3.6.0
+
+# ===========================================
+# LOCAL AI STACK (Python 3.10-3.12 recommended)
+# ===========================================
+# Uncomment these when setting up the home server
+
+# Local Speech-to-Text (choose one)
+# faster-whisper>=1.0.0    # Faster, needs ctranslate2
+# openai-whisper>=20231117  # Original, needs torch
+
+# Local Text-to-Speech
+# piper-tts>=1.2.0
+
+# ===========================================
+# CLOUD APIs (optional fallback)
+# ===========================================
+# OpenAI API
+openai>=1.0.0
+
+# Google Cloud (optional)
+google-cloud-speech>=2.20.0
+google-cloud-texttospeech>=2.14.0
+
+# ===========================================
+# OLLAMA CLIENT (for local LLM)
+# ===========================================
+# Ollama has a REST API, so we use httpx (already included)
+# No additional package needed - just call http://localhost:11434
