@@ -48,3 +48,6 @@ const char* DEVICE_LOCATION = "kitchen";
 const unsigned long WIFI_RECONNECT_MS = 5000;
 const unsigned long WS_RECONNECT_MS = 3000;
 
+// Demo mode
+const bool DEMO_MODE = true;
+const unsigned long DEMO_CYCLE_MS = 6000;

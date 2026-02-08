@@ -78,6 +78,7 @@ Generated for Ralph Wiggum autonomous development loop.
 - [ ] Task 3.2: Add facial expression system
   - Files: `nobu-esp32/nobu_firmware/nobu_firmware.ino`, `nobu-esp32/nobu_firmware/display_faces.cpp`
   - Success: 5+ expressions (happy, sad, thinking, excited, sleepy)
+  - Progress: Demo mode cycles expressions when WS is disconnected
 
 - [ ] Task 3.3: Add audio output (speaker) support
   - Files: `nobu-esp32/nobu_firmware/nobu_firmware.ino`

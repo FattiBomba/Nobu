@@ -13,6 +13,7 @@ static unsigned long lastButtonPress = 0;
 const int DEBOUNCE_MS = 300;
 
 static int currentExpression = 0;
+static unsigned long lastDemoCycleMs = 0;
 
 static void handleMessage(const char* mood, const char* text) {
   if (mood && strlen(mood) > 0) {
@@ -58,6 +59,15 @@ void setup() {
 void loop() {
   wsPoll();
 
+  if (DEMO_MODE && !wsIsConnected()) {
+    unsigned long now = millis();
+    if (now - lastDemoCycleMs > DEMO_CYCLE_MS) {
+      lastDemoCycleMs = now;
+      currentExpression = (currentExpression + 1) % NUM_EXPRESSIONS;
+      displayShowExpression(EXPRESSIONS[currentExpression]);
+    }
+  }
+
   if (digitalRead(BUTTON_PIN) == LOW) {
     if (millis() - lastButtonPress > DEBOUNCE_MS) {
       lastButtonPress = millis();
@@ -77,4 +87,3 @@ void loop() {
 
   delay(50);
 }
-
