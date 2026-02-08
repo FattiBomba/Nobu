@@ -63,30 +63,36 @@ Generated for Ralph Wiggum autonomous development loop.
 
 ## Phase 3: ESP32 Firmware (Client)
 
+- [x] Task 3.0: Confirm Arduino CLI + ESP32 core + upload path
+  - Verified `arduino-cli` works and can compile/upload on COM3
+  - Sketch used: `nobu-esp32/nobu_faces/nobu_faces.ino`
+  - Success: Upload completed via CLI
+
 - [ ] Task 3.1: Create basic ESP32 firmware with display test
-  - Files: `nobu-esp32/nobu_firmware.ino`
+  - Files: `nobu-esp32/nobu_firmware/nobu_firmware.ino`
   - Success: Compiles and shows "Hello! I am Nobu" on display
 
 - [ ] Task 3.2: Add facial expression system
-  - Files: `nobu-esp32/nobu_firmware.ino`
+  - Files: `nobu-esp32/nobu_firmware/nobu_firmware.ino`, `nobu-esp32/nobu_firmware/display_faces.cpp`
   - Success: 5+ expressions (happy, sad, thinking, excited, sleepy)
 
 - [ ] Task 3.3: Add audio output (speaker) support
-  - Files: `nobu-esp32/nobu_firmware.ino`
+  - Files: `nobu-esp32/nobu_firmware/nobu_firmware.ino`
   - Success: Can play tones and mood sounds
 
 - [ ] Task 3.4: Add audio input (microphone) support
-  - Files: `nobu-esp32/nobu_firmware.ino`
+  - Files: `nobu-esp32/nobu_firmware/nobu_firmware.ino`
   - Success: Can capture audio with voice activity detection
 
 - [ ] Task 3.5: Add WiFi and WebSocket client with auto-reconnect
-  - Files: `nobu-esp32/nobu_firmware.ino`
+  - Files: `nobu-esp32/nobu_firmware/nobu_firmware.ino`, `nobu-esp32/nobu_firmware/ws_client.cpp`
   - Device ID and location configuration
   - Auto-reconnect on disconnect
   - Success: Connects to bridge, sends/receives messages, recovers from disconnects
+  - Progress: WiFi + WebSocket scaffolding added in `nobu-esp32/nobu_firmware/*` (needs SSID/password + server URL configured)
 
 - [ ] Task 3.6: Add NVS configuration storage
-  - Files: `nobu-esp32/nobu_firmware.ino`
+  - Files: `nobu-esp32/nobu_firmware/nobu_firmware.ino`
   - Store device_id, location, server_ip, wifi credentials
   - Success: Configuration persists across reboots
 
@@ -140,8 +146,8 @@ Generated for Ralph Wiggum autonomous development loop.
 ---
 
 ## Progress Tracking
-- Total Tasks: 22
-- Completed: 3
+- Total Tasks: 23
+- Completed: 4
 - Remaining: 19
 
 ## Hardware Requirements (Home Server)
@@ -154,4 +160,4 @@ Generated for Ralph Wiggum autonomous development loop.
 - ~€50 per unit (ESP32 + display + mic + speaker)
 - Unlimited clients per server
 
-Last Updated: 2025-02-01
+Last Updated: 2026-02-08
