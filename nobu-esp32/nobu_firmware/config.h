@@ -1,4 +1,5 @@
 #pragma once
+#include <cstdint>
 
 // TTGO T5 V2.3 2.13" display pinout
 #define EPD_CS    5
@@ -16,38 +17,38 @@
 #define BUTTON_PIN 39
 
 // Display dimensions (portrait mode - USB at bottom)
-const int DISPLAY_W = 122;
-const int DISPLAY_H = 250;
+extern const int DISPLAY_W;
+extern const int DISPLAY_H;
 
 // Face positioning (smaller face, mouth closer to eyes)
-const int EYE_Y = 70;
-const int MOUTH_Y = 115;
-const int LEFT_EYE_X = 40;
-const int RIGHT_EYE_X = 82;
-const int EYE_RADIUS = 10;
-const int PUPIL_RADIUS = 4;
+extern const int EYE_Y;
+extern const int MOUTH_Y;
+extern const int LEFT_EYE_X;
+extern const int RIGHT_EYE_X;
+extern const int EYE_RADIUS;
+extern const int PUPIL_RADIUS;
 
 // Expressions
-const char* EXPRESSIONS[] = {"happy", "sad", "thinking", "excited", "sleepy", "curious"};
-const int NUM_EXPRESSIONS = 6;
+extern const char* EXPRESSIONS[];
+extern const int NUM_EXPRESSIONS;
 
 // WiFi credentials
-const char* WIFI_SSID = "YOUR_WIFI_SSID";
-const char* WIFI_PASSWORD = "YOUR_WIFI_PASSWORD";
+extern const char* WIFI_SSID;
+extern const char* WIFI_PASSWORD;
 
 // WebSocket config
-const char* WS_HOST = "192.168.1.100";
-const uint16_t WS_PORT = 8765;
-const char* WS_PATH = "/ws";
+extern const char* WS_HOST;
+extern const uint16_t WS_PORT;
+extern const char* WS_PATH;
 
 // Device identity
-const char* DEVICE_ID = "nobu-kitchen";
-const char* DEVICE_LOCATION = "kitchen";
+extern const char* DEVICE_ID;
+extern const char* DEVICE_LOCATION;
 
 // Reconnect intervals
-const unsigned long WIFI_RECONNECT_MS = 5000;
-const unsigned long WS_RECONNECT_MS = 3000;
+extern const unsigned long WIFI_RECONNECT_MS;
+extern const unsigned long WS_RECONNECT_MS;
 
 // Demo mode
-const bool DEMO_MODE = true;
-const unsigned long DEMO_CYCLE_MS = 6000;
+extern const bool DEMO_MODE;
+extern const unsigned long DEMO_CYCLE_MS;
