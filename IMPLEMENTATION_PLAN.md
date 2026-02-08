@@ -16,7 +16,8 @@ Generated for Ralph Wiggum autonomous development loop.
   - Support multiple concurrent client connections
   - Track client sessions with device_id and location
   - Success: Server starts on port 8765, accepts multiple WebSocket connections
-  - Progress: Added minimal FastAPI WebSocket server and hello handshake
+  - Progress: Added minimal FastAPI WebSocket server + hello/text/audio handlers
+  - Progress: Added `python -m bridge` uvicorn entrypoint (NOBU_HOST/NOBU_PORT)
 
 - [ ] Task 1.2: Implement local Speech-to-Text with faster-whisper
   - Files: `nobu-bridge/bridge/stt.py`, `nobu-bridge/bridge/main.py`
