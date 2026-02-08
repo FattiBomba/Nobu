@@ -117,11 +117,13 @@ Generated for Ralph Wiggum autonomous development loop.
   - Files: `scripts/configure-nobu-client.py`
   - Web UI or serial tool to configure ESP32 devices
   - Success: Easy way to set device_id, location, server IP
+  - Progress: Added CLI tool that edits `nobu-esp32/nobu_firmware/config.h`
 
 - [ ] Task 4.5: Create project README
   - Files: `README.md`
   - Local-first architecture, multi-client setup
   - Success: Setup instructions, architecture overview, usage guide
+  - Progress: Initial README added
 
 ## Phase 5: Testing & Polish
 
